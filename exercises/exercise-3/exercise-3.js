@@ -6,3 +6,14 @@ let order = [
   { itemName: "Hot Coffee", quantity: 2, unitPrice: 1.0 },
   { itemName: "Hash Brown", quantity: 4, unitPrice: 0.4 },
 ];
+
+const takeOrder = (arr) => {
+  let total;
+  console.log("QTY.....ITEM................TOTAL");
+  arr.forEach(({ itemName, quantity, unitPrice }) => {
+    total += unitPrice;
+    console.log(`${quantity}.......${itemName}...........${unitPrice}`);
+  });
+  console.log(`Total: ${total}`);
+};
+takeOrder(order);
